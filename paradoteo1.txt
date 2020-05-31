@@ -1,0 +1,642 @@
+
+
+public class City{
+  String museums ;
+  String cafesRestaurantsBars ;
+  String weather ;
+    float lat ;
+    float lon ;
+ 
+ public String getMuseums() {
+        return this.museums;
+    }
+     public void setMuseums(String mus) {
+        this.museums = mus;
+      } 
+       public String getCafesRestaurantsBars() {
+         return this.cafesRestaurantsBars;
+         }
+            public void setCafesRestaurantsBars(String caRe) {
+               this.cafesRestaurantsBars = caRe;
+            } 
+               public String getWeather(){
+                  return this.weather;
+               }
+                   public void setWeather(String wth) {
+                   this.weather = wth;
+                  } 
+                      public float getLat() {
+                        return this.lat;
+                      }
+                          public void setLat(float latt) {
+                              this.lat = latt;
+                          }
+                               public float getLon() {
+                                   return this.lon;
+                              }
+                                   public void setLon(float lonn) {
+                                         this.lon = lonn;
+                                    }
+ public City() {
+   museums = "Μουσειο Μπενακη" ;
+   cafesRestaurantsBars = " Μπλε Παπαγάλος" ;
+   weather = 21.1;
+   lat = 37.9828302;
+   lon = 23.72936;  
+  }
+
+
+}
+
+
+public class Traveller{
+  String name ;
+   int age ; 
+   float currentlat ;
+   float currentlon ;
+
+  String likemuseums ;
+  String likecafesRestaurantsBars ;
+  String likeweather ;
+    float likelat ;
+    float likelon ;
+ 
+  String visit ;
+
+                public String getName() {
+         return this.name;
+         }
+            public void setName(String naMe) {
+               this.name = naMe;
+            } 
+               public int getAge(){
+                  return this.age;
+               }
+                   public void setAge(int age) {
+                   this.age = agE;
+                  } 
+                      public float getCurrentlat() {
+                        return this.Currentlat;
+                      }
+                          public void setCurrentlat(float curlat) {
+                              this.Currentlat = curlat;
+                          }
+                               public float getCurrentlon() {
+                                   return this.Currentlon;
+                              }
+                                   public void setCurrentlon(float curlon) {
+                                         this.Currentlon = curlon;
+                                    }
+   public String getLikemuseums() {
+        return this.likemuseums;
+    }
+     public void setLikemuseums(String likemus) {
+        this.likemuseums = likemus;
+      } 
+       public String getCafesRestaurantsBars() {
+         return this.cafesRestaurantsBars;
+         }
+            public void setCafesRestaurantsBars(String caRe) {
+               this.cafesRestaurantsBars = caRe;
+            } 
+               public String getWeather(){
+                  return this.weather;
+               }
+                   public void setWeather(String wth) {
+                   this.weather = wth;
+                  } 
+                      public float getLat() {
+                        return this.lat;
+                      }
+                          public void setLat(float latt) {
+                              this.lat = latt;
+                          }
+                               public float getLon() {
+                                   return this.lon;
+                              }
+                                   public void setLon(float lonn) {
+                                         this.lon = lonn;
+                                    }
+
+                               public String getVisit() {
+         return this.visit;
+         }
+            public void setVisit(String viSit) {
+               this.visit = viSit;
+            }  
+
+
+     public Traveller() {
+        name = Bob;
+        age = 22 ; 
+        currentlat = 37.99226 ;
+        currentlon = 23.67393 ; 
+        visit = Ath ;
+       }
+
+       
+
+
+
+ String possibleweather = 	"sunny" ;
+ String possiblemuseum = "Art" ;
+
+static void numberoftravellers(){
+         int numberoftrav ;
+
+
+      public int getNumberoftrav() {
+                                   return this.Numberoftrav;
+                              }
+                                   public void setNumberottrav(int curlon) {
+                                         this.Numberoftrav = not; 
+                                  }
+
+
+
+
+
+
+ 
+
+ class Business extends Traveller{
+   @Override
+   int Similarity(){
+   	double distance = 2.2222222 ;
+       double distance = double distance(lat,currentlat,lon,currentlon);
+         System.out.println("");
+   	
+   }
+
+ }
+    
+public static double distance(double lat1, double lat2, double lon1,
+        double lon2) {
+              // Haversine formula 
+        double dlon = lon2 - lon1;  
+        double dlat = lat2 - lat1; 
+        double a = Math.pow(Math.sin(dlat / 2), 2) 
+                 + Math.cos(lat1) * Math.cos(lat2) 
+                 * Math.pow(Math.sin(dlon / 2),2); 
+              
+        double c = 2 * Math.asin(Math.sqrt(a)); 
+        double r = 6371; 
+        return(c * r); 
+} 
+
+
+
+
+   public void Similarity(City city) {
+          
+       int i = Traveller.likemuseums.compareTo(city.museums);
+       if (i != 0){
+    k++ ;
+    }
+
+   i = Traveller.likecafesRestaurantsBars.compareTo(city.cafesRestaurantsBars);
+       if (i != 0){
+    k++ ;
+    }
+
+
+    i = Traveller.likelat.compareTo(city.lat);
+       if (i != 0){
+    k++ ;
+    }
+      i = Traveller.likelon.compareTo(city.lon);
+       if (i != 0){
+    k++ ;
+    }
+
+
+       return k ;
+
+
+   } 
+
+
+
+    class Overloading1{
+
+   public void CompareCities(ArrayList<Integer> cities){
+        
+        string city ;
+        int value ;
+        int temp = 0 ;
+        int count = 0;    
+      while (arrlist.size() > count) {
+  String[] array = cities.toArray(new String[cities.size()]);
+       if( value >= temp ){
+         value = Similarity(City cities) ;
+         city = cities.name ;
+            else{
+            temp = Similarity(City cities) ;
+            }
+       }
+       count++;
+      }
+      return city;
+   }
+
+
+
+    String ticket = 'rome' ;
+    char charArray[] ;
+    public void freeTicket extends Traveller(char charArray[]){
+             
+          for(int i=0; i < N ; i++;){
+                for(int i=0; i < N ; i++;){
+               traveller pi = traveller charArray[i];
+               Similarity(ticket); 
+              if(traveller pi.city = )
+               
+           }
+          }
+
+         }
+    }
+
+
+
+import java.io.*;
+import java.util.*;
+import java.util.Scanner; 
+import java.io.File;  
+import java.io.IOException;  
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+
+
+ public static void Main(String[] args) {
+
+ 
+       Scanner scn = new Scanner(System.in); 
+
+        Traveller traveller = new Traveller();
+            System.out.println("Please enter museum that you like: ");
+            Traveller.setLikemuseum (scanner.nextLine());
+            System.out.println("Please enter cafesRestaurantsBars that you like: ");
+            Traveller.setLikemuseum (scanner.nextLine());
+            System.out.println("Please enter weather that you like: ");
+            Traveller.setLikemuseum (scanner.nextLine());
+            System.out.println("Please enter latitude that you like: ");
+            Traveller.setLikemuseum (scanner.nextLine());
+            System.out.println("Please enter longtitude that you like: ");
+            Traveller.setLikemuseum (scanner.nextLine());
+
+
+
+        System.out.println("Are you a business or a tourist , traveller ?");
+         
+          
+        
+
+ArrayList<Article> cityy = new ArrayList<>();
+        
+        String apiUrl = "https://api.wiki.com/svc/search/v2/wikisearch.json";
+        String apiKey = "f812fa3556e745639e378dfc9f7b4fda";
+        
+
+        ApiCaller http = new ApiCaller();
+        
+        try {
+            System.out.println("Testing 1 - Send Http GET request");
+            InputStream apiResponse = http.sendGet(apiUrl, apiKey);
+            JsonParser jp = new JsonParser();
+            JSONObject jsonObject = jp.readAsJson(apiResponse);
+            
+            JSONObject resp = (JSONObject) jsonObject.get("response");
+            JSONArray docs = (JSONArray) resp.get("docs");
+            
+            
+            
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+ArrayList<Article> weatherr = new ArrayList<>();
+        
+        String apiUrl = "https://api.openweather.com/svc/search/v2/weatherr.json";
+        String apiKey = "f812fa3556e745639e378dfc9f7b4fda";
+        
+
+        ApiCaller http = new ApiCaller();
+        
+        try {
+            System.out.println("Testing 1 - Send Http GET request");
+            InputStream apiResponse = http.sendGet(apiUrl, apiKey);
+            JsonParser jp = new JsonParser();
+            JSONObject jsonObject = jp.readAsJson(apiResponse);
+            
+            JSONObject resp = (JSONObject) jsonObject.get("response");
+            JSONArray docs = (JSONArray) resp.get("docs");
+            
+            
+            
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
+}
+
+
+
+
+
+
+
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.HttpClientBuilder;
+
+
+public class ApiCaller {
+
+    private final String USER_AGENT = "Mozilla/5.0";
+
+    // HTTP GET request
+    public InputStream sendGet(String apiEndPoint, String apiKey) throws Exception {
+
+        String url = apiEndPoint + "?api-key=" + apiKey + "&q=" ;
+        
+        HttpClient client = HttpClientBuilder.create().build();
+        HttpGet request = new HttpGet(url);
+        HttpResponse response = client.execute(request);
+        
+        // add request header
+        request.addHeader("User-Agent", USER_AGENT);
+
+        System.out.println("\nSending 'GET' request to URL : " + url);
+        System.out.println("Response Code : " + response.getStatusLine().getStatusCode());
+
+        InputStream contentResponse = response.getEntity().getContent();
+        
+       
+        return contentResponse;
+
+    }
+}
+
+
+
+
+package weather;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+    "id",
+    "main",
+    "description",
+    "icon"
+})
+public class Weather {
+
+    @JsonProperty("id")
+    private Integer id;
+    @JsonProperty("main")
+    private String main;
+    @JsonProperty("description")
+    private String description;
+    @JsonProperty("icon")
+    private String icon;
+    @JsonIgnore
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public Weather() {
+    }
+
+    /**
+     * 
+     * @param icon
+     * @param description
+     * @param main
+     * @param id
+     */
+    public Weather(Integer id, String main, String description, String icon) {
+        super();
+        this.id = id;
+        this.main = main;
+        this.description = description;
+        this.icon = icon;
+    }
+
+    @JsonProperty("id")
+    public Integer getId() {
+        return id;
+    }
+
+    @JsonProperty("id")
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    @JsonProperty("main")
+    public String getMain() {
+        return main;
+    }
+
+    @JsonProperty("main")
+    public void setMain(String main) {
+        this.main = main;
+    }
+
+    @JsonProperty("description")
+    public String getDescription() {
+        return description;
+    }
+
+    @JsonProperty("description")
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @JsonProperty("icon")
+    public String getIcon() {
+        return icon;
+    }
+
+    @JsonProperty("icon")
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
+    @JsonAnyGetter
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
+    }
+
+    @JsonAnySetter
+    public void setAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
+    }
+
+}
+
+
+
+
+
+package wikipedia;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import org.apache.commons.lang.builder.ToStringBuilder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+    "batchcomplete",
+    "warnings",
+    "query"
+})
+public class MediaWiki {
+
+    @JsonProperty("batchcomplete")
+    private Boolean batchcomplete;
+    @JsonProperty("warnings")
+    private Warnings warnings;
+    @JsonProperty("query")
+    private Query query;
+    @JsonIgnore
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public MediaWiki() {
+    }
+
+    /**
+     * 
+     * @param batchcomplete
+     * @param warnings
+     * @param query
+     */
+    public MediaWiki(Boolean batchcomplete, Warnings warnings, Query query) {
+        super();
+        this.batchcomplete = batchcomplete;
+        this.warnings = warnings;
+        this.query = query;
+    }
+
+    @JsonProperty("batchcomplete")
+    public Boolean getBatchcomplete() {
+        return batchcomplete;
+    }
+
+    @JsonProperty("batchcomplete")
+    public void setBatchcomplete(Boolean batchcomplete) {
+        this.batchcomplete = batchcomplete;
+    }
+
+    @JsonProperty("warnings")
+    public Warnings getWarnings() {
+        return warnings;
+    }
+
+    @JsonProperty("warnings")
+    public void setWarnings(Warnings warnings) {
+        this.warnings = warnings;
+    }
+
+    @JsonProperty("query")
+    public Query getQuery() {
+        return query;
+    }
+
+    @JsonProperty("query")
+    public void setQuery(Query query) {
+        this.query = query;
+    }
+
+    @JsonAnyGetter
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
+    }
+
+    @JsonAnySetter
+    public void setAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this).append("batchcomplete", batchcomplete).append("warnings", warnings).append("query", query).append("additionalProperties", additionalProperties).toString();
+    }
+
+}
+
+
+
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.net.URL;
+import java.nio.charset.Charset;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class JsonReader {
+
+  private static String readAll(Reader rd) throws IOException {
+    StringBuilder sb = new StringBuilder();
+    int cp;
+    while ((cp = rd.read()) != -1) {
+      sb.append((char) cp);
+    }
+    return sb.toString();
+  }
+
+  public static JSONObject readJsonFromUrl(String url) throws IOException, JSONException {
+    InputStream is = new URL(url).openStream();
+    try {
+      BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
+      String jsonText = readAll(rd);
+      JSONObject json = new JSONObject(jsonText);
+      return json;
+    } finally {
+      is.close();
+    }
+  }
+
+  public static void main(String[] args) throws IOException, JSONException {
+    JSONObject json = readJsonFromUrl("https://graph.wiki.com/19292868552");
+    System.out.println(json.toString());
+    System.out.println(json.get("id"));
+  }
+}
+

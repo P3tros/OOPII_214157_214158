@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<form name="loginForm" method="post" action="loginServlet">
+    Name: <input type="text" name="name"/> <br/>
+    Age: <input type="text name="age " /> <br/>
+    Currentlat: <input type="text" name="currentlat"/> <br/>
+    Currentlon: <input type="text name="currentlon"/> <br/>
+    Likeweather: <input type="text name="likeweather"/> <br/> 
+    Likemuseums: <input type="text" name="likemuseums"/> <br/>
+    LikecafesRestaurantsBars: <input type="text name="likecafesRestaurantsBars"/> <br/>
+    Likelat: <input type="text" name="likelat"/> <br/>
+    Likelon: <input type="text name="likelon " /> <br/>
+    
+   
+    <input type="submit" value="Login" />
+</form>
+
+
+
+</body>
+</html>
+
+
+
+
+
+package net.codejava.servlet;
+ 
+import java.io.IOException;
+import java.io.PrintWriter;
+ 
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+ 
+@WebServlet("/loginServlet")
+public class LoginServlet extends HttpServlet {
+ 
+    protected void doPost(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
+         
+        // read form fields
+        String Name = request.getParameter("name");
+        String Age = request.getParameter("age");
+        String Currentlat = request.getParameter("currentlat");
+        String Currentlon = request.getParameter("currentlon");
+        String Likemuseums = request.getParameter("likemuseums");
+        String LikecafesRestaurantsBars = request.getParameter("likecafesRestaurantsBars");
+        String Likelat = request.getParameter("likelat");
+        String Likeweather = request.getParameter("likeweather");
+        String Likelon = request.getParameter("likelon");
+         
+
+ 
+        
+        
+    }
+ 
+}
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <title>
+  	 
+ </title>
+ <body>
+ 	
+ 	<table align="center" border="1px" style="width: 600px; line-height: 40px;">
+ 		 
+ 	 <t>
+ 	 	 <th> name </th>
+ 	 	  <th> age </th>
+ 	 	   <th> lat </th>
+ 	 	    <th> lon </th>
+ 	 	     <th> weather </th>
+ 	 	      <th> bars </th>
+ 	 	</t>
+ 	 	      
+ 	<?php 
+ 	  while($rows = mysql_fetch_assoc($result))	
+ 	      {
+       ?>   	<tr>
+                    
+                    <td> <?php echo $rows['name']; $?</td> 
+                    <td> <?php echo $rows['age'] ;$?</td> 		
+          	         <td> <?php echo $rows['lat']; $?</td> 
+          	          <td> <?php echo $rows['lon']; $?</td> 
+          	           <td> <?php echo $rows['weather']; $?</td>   
+          	            <td> <?php echo $rows['bars'] ;$?</td> 
+          	             
+
+
+          	</tr>
+    <?php
+          }
+     ?>
+ 	</table>
+
+ </body>
+
+</html>
+
+
+import java.util.Scanner;
+import java.io.*;
+
+public class JavaProgram
+{
+    public static void main(String[] input)
+    {
+        String fname;
+        Scanner scan = new Scanner(System.in);
+        
+        
+        
+        System.out.print("Enter File Name to Open (with extension like file.txt) : ");
+        fname = scan.nextLine();
+        
+        
+        
+        String line = null;
+        try
+        {
+            
+            FileReader fileReader = new FileReader(fname);
+            
+            
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            
+            while((line = bufferedReader.readLine()) != null)
+            {
+                System.out.println(line);
+            }
+            
+          
+            bufferedReader.close();
+        }
+        catch(IOException ex)
+        {
+            System.out.println("Error reading file named '" + fname + "'");
+        }
+    }
+}
+
+
