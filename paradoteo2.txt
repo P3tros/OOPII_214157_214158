@@ -6,7 +6,7 @@ public void insert(String museums, String cafesRestaurantsBars, String weather, 
     System.out.println(list);
     DatabaseConnection db = new DatabaseConnection();
     try (Connection connect = db.getConnection()) {
-        String sql = "insert into user_payment (museums ,cafesRestaurantsBars, weather, lat, lon) VALUES (?,?,?,?,?)";
+        String sql = "insert into citydb (museums ,cafesRestaurantsBars, weather, lat, lon) VALUES (?,?,?,?,?)";
         try (PreparedStatement ps = connect.prepareStatement(sql)) {
             ps.setString(1, Museums);
             ps.setString(2, CafesRestaurantsBars);
@@ -34,13 +34,12 @@ public void insert(String museums, String cafesRestaurantsBars, String weather, 
         public boolean equals(object o) {
 
 
-
             if (this == o) return true;
             if (!(o instanceof City)) return false;
 
 
-
                 City city  = (city) o;
+
 
             return !(cityName != null ? !cityName.equals(City.cityName) : cityName.id != null);
 
@@ -157,7 +156,7 @@ boolean didCollectionChange = collection.add(anElement);
 List<String> traveller = createList();
 
 
-city aElement = new City();
+traveller aElement = new traveller();
 
   aElement.name = 'none';
    aElement.age = 37 ; 
@@ -171,7 +170,7 @@ city aElement = new City();
   aElement.childname = 37.9876 ;
 
 
-city aElement = new City(); 
+traveller aElement = new City(); 
 boolean didCollectionChange = collection.add(aElement);
 
 
