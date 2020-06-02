@@ -293,12 +293,12 @@ import java.io.ObjectOutputStream;
 
 
 
-        System.out.println("Are you a business or a tourist , traveller ?");
+       
          
           
         
 
-ArrayList<Article> cityy = new ArrayList<>();
+ArrayList<Article> city = new ArrayList<>();
         
         String apiUrl = "https://api.wiki.com/svc/search/v2/wikisearch.json";
         String apiKey = "f812fa3556e745639e378dfc9f7b4fda";
@@ -321,7 +321,7 @@ ArrayList<Article> cityy = new ArrayList<>();
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-ArrayList<Article> weatherr = new ArrayList<>();
+ArrayList<Article> weather = new ArrayList<>();
         
         String apiUrl = "https://api.openweather.com/svc/search/v2/weatherr.json";
         String apiKey = "f812fa3556e745639e378dfc9f7b4fda";
